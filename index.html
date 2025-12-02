@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Report – RevealJS</title>
+
+  <!-- RevealJS Core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+
+  <!-- Code Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <section>
+      <h1>Quarterly Earnings Report</h1>
+      <h3>Presented by Technical Consultant</h3>
+      <p>Email: <strong>24f2007860@ds.study.iitm.ac.in</strong></p>
+
+      <aside class="notes">
+        Welcome to the quarterly earnings report.  
+        Introduce yourself and verify that all stakeholders can see the display.
+      </aside>
+    </section>
+
+    <!-- Markdown Slide -->
+    <section data-markdown>
+      <textarea data-template>
+## 📊 This Quarter’s Highlights
+
+- Revenue growth: **12%** ↑
+- Customer acquisition: **+8,200**
+- Operational costs: **–6%**
+- Net profit margin: **18%**
+
+---
+
+## Key Takeaway  
+The institution continues strong upward performance this quarter.
+      </textarea>
+
+      <aside class="notes">
+        This slide is generated using Markdown.  
+        Explain each metric in simple terms.
+      </aside>
+    </section>
+
+    <!-- Fragment Animation Slide -->
+    <section>
+      <h2>Revenue Drivers</h2>
+      <ul>
+        <li class="fragment">Increased digital adoption</li>
+        <li class="fragment">Higher transaction volume</li>
+        <li class="fragment fade-up">Improved customer retention</li>
+      </ul>
+
+      <aside class="notes">
+        Each point appears one after another.  
+        Use this to emphasize important drivers.
+      </aside>
+    </section>
+
+    <!-- Code Example Slide -->
+    <section>
+      <h2>Data Extraction Pipeline (Python)</h2>
+      <pre><code class="python" data-line-numbers="1-2|5-7">
+import pandas as pd
+import sqlalchemy as db
+
+# Load financial data
+engine = db.create_engine("mysql://user:pass@host/db")
+df = pd.read_sql("SELECT * FROM earnings", engine)
+
+print(df.head())
+      </code></pre>
+
+      <aside class="notes">
+        Quick demonstration of backend pipeline.  
+        The highlighted lines animate step-by-step.
+      </aside>
+    </section>
+
+    <!-- Math Slide -->
+    <section>
+      <h2>Financial Formula</h2>
+
+      <!-- MathJax Equation -->
+      <p>
+        \[
+        ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100
+        \]
+      </p>
+
+      <aside class="notes">
+        Use formula to explain return on investment.  
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+<script>
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    transition: "slide",
+    plugins: [
+      RevealMarkdown,
+      RevealHighlight,
+      RevealMath.KaTeX,
+      RevealNotes
+    ]
+  });
+</script>
+
+</body>
+</html>
